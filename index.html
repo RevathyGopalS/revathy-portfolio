@@ -1,253 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Revathy Gopal S - Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f0f4f8;
-      color: #2b2d42;
-      margin: 0;
-      padding: 0;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-    header {
-      background-color: #023e8a;
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: #f3f6fa;
+    color: #1e293b;
+    line-height: 1.6;
+  }
+
+  header {
+    background: linear-gradient(to right, #0077b6, #023e8a);
+    color: white;
+    padding: 30px 10px;
+    text-align: center;
+  }
+
+  header img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid #ffffffdd;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    object-fit: cover;
+  }
+
+  header h1 {
+    margin: 8px 0 4px;
+    font-size: 2.2em;
+  }
+
+  header p {
+    margin: 4px 0;
+    font-size: 1em;
+  }
+
+  section {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 8px;
+  }
+
+  h2 {
+    color: #023e8a;
+    border-bottom: 2px solid #90e0ef;
+    padding-bottom: 6px;
+    margin-top: 20px;
+    font-size: 1.5em;
+  }
+
+  h3 {
+    color: #0077b6;
+    margin-top: 16px;
+    font-size: 1.15em;
+  }
+
+  ul {
+    padding-left: 18px;
+    margin: 6px 0;
+  }
+
+  .box {
+    background-color: #ffffff;
+    padding: 18px;
+    margin-top: 16px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  }
+
+  a {
+    color: #0077b6;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    background-color: #001d3d;
+    color: white;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 0.9em;
+  }
+
+  @media (max-width: 600px) {
+    header img {
+      width: 130px;
+      height: 130px;
     }
 
     header h1 {
-      font-size: 2.8em;
-      margin-bottom: 10px;
-    }
-
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
+      font-size: 1.6em;
     }
 
     h2 {
-      color: #0077b6;
-      border-bottom: 2px solid #90e0ef;
-      padding-bottom: 6px;
-      margin-top: 0;
+      font-size: 1.3em;
     }
+  }
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
 
-    .box {
-      background-color: #ffffff;
-      padding: 30px;
-      margin: 30px 0;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease;
-    }
+.project-card {
+  background-color: #f9fcff;
+  border: 1px solid #e0e6ed;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .box:hover {
-      transform: translateY(-5px);
-    }
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
 
-    ul {
-      padding-left: 20px;
-      line-height: 1.7;
-    }
+.project-card h3 {
+  margin-top: 0;
+  color: #0077b6;
+}
 
-    .contact a {
-      color: #0077b6;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    .contact a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      background-color: #001d3d;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-    }
-
-    .role-title {
-      font-weight: bold;
-      color: #0077b6;
-      font-size: 1.1em;
-    }
-
-    .company {
-      font-style: italic;
-      color: #6c757d;
-    }
-
-    .exp-block {
-      margin-bottom: 25px;
-    }
-
-    .skills-list, .achievements-list {
-      columns: 2;
-      -webkit-columns: 2;
-      -moz-columns: 2;
-      list-style: square inside;
-    }
-
-    @media (max-width: 768px) {
-      section {
-        padding: 20px;
-      }
-
-      header h1 {
-        font-size: 2em;
-      }
-
-      .skills-list, .achievements-list {
-        columns: 1;
-      }
-    }
-  </style>
+</style>
 </head>
 <body>
 
-<header>
-  <h1>Revathy Gopal S</h1>
-  <p>Business Intelligence Analyst | Data-Driven Decision Maker | Chennai, India</p>
+<header style="padding: 40px 20px; background: linear-gradient(to right, #0077b6, #023e8a); color: white;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 40px; max-width: 1200px; margin: auto;">
+
+    <!-- Left Column: Photo + Contact -->
+    <div style="flex: 1; min-width: 280px; text-align: center;">
+      <img src="https://github.com/RevathyGopalS/portfolio-assets/raw/refs/heads/main/profile" 
+           alt="Revathy Gopal S" 
+           style="width: 180px; height: 180px; border-radius: 50%; border: 5px solid #ffffffdd; box-shadow: 0 4px 12px rgba(0,0,0,0.2); object-fit: cover; margin-bottom: 15px;">
+      <h1 style="margin: 8px 0 4px;">Revathy Gopal S</h1>
+      <p style="margin: 5px 0;">Mogappair West, Chennai, Tamil Nadu, India</p>
+      <p style="margin: 5px 0;">📧 <a href="mailto:revathygopals@gmail.com" style="color:white;">revathygopals@gmail.com</a></p>
+      <p style="margin: 5px 0;">📞 +91-9400935635</p>
+      <p>🔗 <a href="https://linkedin.com/in/revathy-gopal-s-216167219" target="_blank" style="color:white;">LinkedIn</a></p>
+    </div>
+
+   <!-- Right Column: Embedded Professional Summary -->
+<div style="flex: 2; min-width: 300px;">
+  <h2 style="color: #ffffff; border-bottom: 2px solid #90e0ef; padding-bottom: 6px; margin-top: 0;">Professional Summary</h2>
+  <div style="margin-top: 10px; line-height: 1.8; text-align: justify;">
+    <p>
+      Detail-oriented Product Operations & Support Analyst with 4+ years of experience in technical support, data analysis, and cross-functional collaboration across SaaS and enterprise platforms. Skilled in SQL, Python, JIRA, ServiceNow, Power BI, Excel, and AWS tools like CloudWatch/S3.
+    </p>
+    <p>
+      Adept in business reporting and dashboarding with Power BI, Jaspersoft, and Jupyter Notebook. Known for building efficient automation pipelines and translating data into insights for strategic decisions.
+    </p>
+    <p>
+      Improved SQL query execution by 35%, automated reporting pipelines reducing manual effort by 40%, and implemented AI-driven chatbot workflows reducing Tier-1 support load by 30%.
+    </p>
+  </div>
+</div>
+
 </header>
 
-<section>
+
+
+
   <div class="box">
-    <h2>About Me</h2>
-    <p>I am a results-driven Business Intelligence Analyst with 4+ years of experience in dashboarding, analytics, support engineering, and stakeholder collaboration. I specialize in transforming complex technical challenges into efficient, data-driven solutions using tools like SQL, Power BI, and AWS. I thrive in cross-functional teams, drive operational efficiency, and ensure high client satisfaction through scalable support and automation strategies.</p>
+  <h2>Key Projects</h2>
+  <div class="project-grid">
+    
+    <div class="project-card">
+      <h3>📊 Sales Performance Dashboard</h3>
+      <p><strong>Goal:</strong> Build a dashboard for analyzing multi-dimensional sales metrics.</p>
+      <p><strong>Method:</strong> Used Power BI and DAX for revenue trends, geo-distribution, and customer insights.</p>
+      <p><strong>Outcome:</strong> Enabled real-time decision-making and strategy planning.</p>
+      <p><strong>Tools:</strong> Power BI, DAX</p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/RevathyGopalS/PowerBI_Dasboard-Portfolio_Project-" target="_blank">View Project</a></p>
+    </div>
+
+    <div class="project-card">
+      <h3>📈 User Engagement Dashboard</h3>
+      <p><strong>Goal:</strong> Track system usage and user behavior.</p>
+      <p><strong>Method:</strong> Built reports in Power BI & Jaspersoft after stakeholder interviews.</p>
+      <p><strong>Outcome:</strong> 15% increase in user retention and 40% reduction in manual reporting time.</p>
+      <p><strong>Tools:</strong> Power BI, Jaspersoft, Excel</p>
+    </div>
+
+    <div class="project-card">
+      <h3>🤖 AI-Driven LMS Optimization</h3>
+      <p><strong>Goal:</strong> Automate and enhance user experience on LMS platform.</p>
+      <p><strong>Method:</strong> Requirement gathering, AI chatbot integration, intelligent scheduling.</p>
+      <p><strong>Outcome:</strong> 30% automation and improved efficiency by 25%.</p>
+      <p><strong>Tools:</strong> AI tools, Docs, UX Collaboration</p>
+    </div>
+
+    <div class="project-card">
+      <h3>🛠️ SQL Query Optimization</h3>
+      <p><strong>Goal:</strong> Speed up analytics and backend diagnostics.</p>
+      <p><strong>Method:</strong> Indexing, partitioning, and query optimization.</p>
+      <p><strong>Outcome:</strong> Reduced execution time by 35% and improved support diagnostics.</p>
+      <p><strong>Tools:</strong> SQL</p>
+    </div>
+
+  </div>
+</div>
+
+  <div class="box">
+    <h2>Professional Experience</h2>
+    <ul>
+      <li><strong>Customer Support & Success Manager</strong> – Emplay Analytics (Mar–Jun 2025)</li>
+      <li><strong>Senior Software Support Engineer</strong> – iLearningEngines (Jan 2024–Feb 2025)</li>
+      <li><strong>Software Support Engineer</strong> – iLearningEngines (Aug 2021–Dec 2023)</li>
+      <li><strong>Application Engineer</strong> – PE Instrumentation (Mar–Jul 2021)</li>
+      <li><strong>Client Service Associate</strong> – Wings Technologies (Jan–Jun 2020)</li>
+    </ul>
   </div>
 
   <div class="box">
     <h2>Skills</h2>
-    <ul class="skills-list">
-      <li>SOP & Knowledge Base Creation</li>
-      <li>Cross-functional Collaboration</li>
-      <li>API Support (Postman)</li>
-      <li>Technical Troubleshooting</li>
-      <li>SQL Querying & Data Analysis</li>
-      <li>Customer Experience & Escalation Handling</li>
-      <li>Power BI & Dashboarding</li>
-      <li>AWS Tools: CloudWatch, S3</li>
-      <li>Log Monitoring</li>
-      <li>Advanced Excel & Data Statistics</li>
-      <li>Team Leadership & SLA Management</li>
-      <li>Product Lifecycle & Catalog Management</li>
-      <li>Power Query</li>
-      <li>JIRA, ServiceNow, Freshdesk</li>
-      <li>Escalation Handling</li>
-    </ul>
+    <p><strong>Languages:</strong> SQL, Python (Jupyter Notebook)</p>
+    <p><strong>Tools:</strong> Power BI, Jaspersoft, Tableau, Excel, Postman, AWS S3, CloudWatch</p>
+    <p><strong>Support & Ops:</strong> API Diagnostics, Log Monitoring, Freshdesk, JIRA, ServiceNow</p>
+    <p><strong>Other:</strong> SOP Writing, Escalation Handling, Dashboarding, SLA Management, Cross-Functional Communication</p>
   </div>
 
   <div class="box">
-    <h2>Key Achievements</h2>
-    <ul class="achievements-list">
-      <li>Delivered end-to-end support for iLearningEngines across onboarding and catalog operations.</li>
-      <li>Reduced manual reporting by 40% through Power BI & Jaspersoft automation.</li>
-      <li>Improved SQL query performance by 35% for backend diagnostics and analytics.</li>
-      <li>Reduced Tier-1 support response time by 30% using AI chatbot workflows.</li>
-      <li>Led a 5–10 member support team, maintaining SLA compliance.</li>
-      <li>Authored 40+ SOPs and KB articles, standardizing training and support.</li>
-      <li>Partnered with Product & Engineering to fix launch issues and catalog accuracy.</li>
-    </ul>
-  </div>
-
-  <div class="box">
-    <h2>Projects</h2>
-
-    <h3>📊 Sales Performance Dashboard</h3>
-    <p><strong>Objective:</strong> Built a Power BI dashboard for analyzing revenue, customer behavior, and geography trends across sales channels.</p>
+    <h2>Education & Certifications</h2>
     <ul>
-      <li>Revenue overview, customer insights, regional analysis, and YoY trends.</li>
-      <li>Used Power BI, DAX, and advanced filtering options.</li>
-      <li><strong>Impact:</strong> Enabled faster decision-making and regional strategy optimization.</li>
+      <li><strong>B.Tech in Electronics & Communication Engineering</strong> – Kerala University (2012–2016)</li>
+      <li>Microsoft + LinkedIn Certification – Generative AI (2024)</li>
+      <li>Google IT Support Professional Certificate</li>
+      <li>BSNL Gold Certified Engineer</li>
     </ul>
-
-    <h3>📈 User Engagement & Analytics Dashboard</h3>
-    <p>Developed dashboards in Power BI & Jaspersoft to track user retention and operational KPIs.</p>
-    <ul>
-      <li>Reduced manual report time by 40% and increased retention by 15%.</li>
-      <li>Scalable templates built for cross-department usage.</li>
-    </ul>
-
-    <h3>🤖 AI-Driven LMS & Hyper-App Analysis</h3>
-    <p>Led requirement gathering and cross-functional collaboration for AI integrations in LMS and enterprise workflows.</p>
-    <ul>
-      <li>Features: AI chatbot, recommendation engine, intelligent scheduling.</li>
-      <li>Improved efficiency by 25% and reduced manual work by 30%.</li>
-    </ul>
-  </div>
-
-  <div class="box">
-    <h2>Professional Experience</h2>
-
-    <div class="exp-block">
-      <p class="role-title">Customer Support and Success Manager</p>
-      <p class="company">Emplay Analytics India Pvt Ltd | Mar 2025 – Jun 2025 | Remote</p>
-      <ul>
-        <li>Managed technical support, escalations, and reporting for enterprise clients.</li>
-        <li>Built lifecycle dashboards using SQL and Excel; collaborated with leadership and Product teams.</li>
-      </ul>
-    </div>
-
-    <div class="exp-block">
-      <p class="role-title">Senior Software Support Engineer</p>
-      <p class="company">iLearningEngines India Pvt Ltd | Jan 2024 – Feb 2025 | Remote</p>
-      <ul>
-        <li>Built Power BI dashboards and responded to complex LMS queries from global clients.</li>
-        <li>Led SOP creation, vendor documentation, and collaborated with Sales for renewals.</li>
-      </ul>
-    </div>
-
-    <div class="exp-block">
-      <p class="role-title">Software Support Engineer</p>
-      <p class="company">iLearningEngines India Pvt Ltd | Aug 2021 – Dec 2023</p>
-      <ul>
-        <li>Handled API and SQL-related issues; supported integrations, monitored AWS logs, and led catalog audits.</li>
-      </ul>
-    </div>
-
-    <div class="exp-block">
-      <p class="role-title">Application Engineer</p>
-      <p class="company">PE Instrumentation | Mar 2021 – Jul 2021</p>
-      <ul>
-        <li>Provided support for industrial control systems and drafted technical documentation.</li>
-      </ul>
-    </div>
-
-    <div class="exp-block">
-      <p class="role-title">Client Service Associate</p>
-      <p class="company">Wings Technologies | Jan 2020 – Jun 2020</p>
-      <ul>
-        <li>Supported US & Canadian clients; handled escalations and coordinated with technical teams.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="box">
-    <h2>Education</h2>
-    <ul>
-      <li><strong>B.Tech in Electronics and Communication</strong> – Kerala University (2012–2016) – Grade: 7.8/10</li>
-    </ul>
-  </div>
-
-  <div class="box contact">
-    <h2>Contact</h2>
-    <p><strong>Email:</strong> <a href="mailto:revathygopals@gmail.com">revathygopals@gmail.com</a></p>
-    <p><strong>Phone:</strong> +91-9400935635</p>
-    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/revathy-gopal-s-216167219" target="_blank">Revathy Gopal S</a></p>
   </div>
 </section>
 
 <footer>
-  <p>© 2025 Revathy Gopal S | Chennai, Tamil Nadu, India</p>
+  <p>© 2025 Revathy Gopal S. All rights reserved.</p>
 </footer>
 
 </body>
