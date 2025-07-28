@@ -1,52 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Revathy Gopal S - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
+      color: #2b2d42;
       margin: 0;
       padding: 0;
-      background-color: #f4f4f4;
     }
 
     header {
-      background-color: #4CAF50;
+      background-color: #023e8a;
       color: white;
-      padding: 40px;
+      padding: 60px 20px;
       text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
     }
 
     section {
-      padding: 20px 60px;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
     }
 
     h2 {
-      color: #333;
+      color: #0077b6;
+      border-bottom: 2px solid #90e0ef;
+      padding-bottom: 6px;
+      margin-top: 0;
     }
 
-    .skills, .projects, .contact {
-      background-color: white;
-      margin: 20px auto;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 800px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    .box {
+      background-color: #ffffff;
+      padding: 30px;
+      margin: 30px 0;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
     }
 
-    .socials a {
-      margin: 0 10px;
+    .box:hover {
+      transform: translateY(-5px);
+    }
+
+    ul {
+      padding-left: 20px;
+      line-height: 1.7;
+    }
+
+    .contact a {
+      color: #0077b6;
       text-decoration: none;
-      color: #4CAF50;
+      font-weight: 500;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
     }
 
     footer {
-      background-color: #333;
+      background-color: #001d3d;
       color: white;
       text-align: center;
       padding: 20px;
-      margin-top: 40px;
+      font-size: 0.9em;
+    }
+
+    .role-title {
+      font-weight: bold;
+      color: #0077b6;
+      font-size: 1.1em;
+    }
+
+    .company {
+      font-style: italic;
+      color: #6c757d;
+    }
+
+    .exp-block {
+      margin-bottom: 25px;
+    }
+
+    .skills-list, .achievements-list {
+      columns: 2;
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      list-style: square inside;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 20px;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+
+      .skills-list, .achievements-list {
+        columns: 1;
+      }
     }
   </style>
 </head>
@@ -54,49 +116,138 @@
 
 <header>
   <h1>Revathy Gopal S</h1>
-  <p>Technical Support & Data Specialist | Chennai, India</p>
+  <p>Business Intelligence Analyst | Data-Driven Decision Maker | Chennai, India</p>
 </header>
 
-<section class="about">
-  <h2>About Me</h2>
-  <p>
-    I’m a Technical Support and Product Data Specialist with over 4 years of experience in troubleshooting, data analysis, and platform support. I’ve worked with global clients and have expertise in SQL, Power BI, AWS tools, and automation.
-  </p>
-</section>
+<section>
+  <div class="box">
+    <h2>About Me</h2>
+    <p>I am a results-driven Business Intelligence Analyst with 4+ years of experience in dashboarding, analytics, support engineering, and stakeholder collaboration. I specialize in transforming complex technical challenges into efficient, data-driven solutions using tools like SQL, Power BI, and AWS. I thrive in cross-functional teams, drive operational efficiency, and ensure high client satisfaction through scalable support and automation strategies.</p>
+  </div>
 
-<section class="skills">
-  <h2>Skills</h2>
-  <ul>
-    <li>SQL, PostgreSQL</li>
-    <li>Power BI, Jaspersoft, Tableau (basic)</li>
-    <li>Python (Basics)</li>
-    <li>Customer Support (Freshdesk, LMS platforms)</li>
-    <li>AWS S3, CloudWatch</li>
-    <li>Workflow Automation, Chatbot Support</li>
-  </ul>
-</section>
+  <div class="box">
+    <h2>Skills</h2>
+    <ul class="skills-list">
+      <li>SOP & Knowledge Base Creation</li>
+      <li>Cross-functional Collaboration</li>
+      <li>API Support (Postman)</li>
+      <li>Technical Troubleshooting</li>
+      <li>SQL Querying & Data Analysis</li>
+      <li>Customer Experience & Escalation Handling</li>
+      <li>Power BI & Dashboarding</li>
+      <li>AWS Tools: CloudWatch, S3</li>
+      <li>Log Monitoring</li>
+      <li>Advanced Excel & Data Statistics</li>
+      <li>Team Leadership & SLA Management</li>
+      <li>Product Lifecycle & Catalog Management</li>
+      <li>Power Query</li>
+      <li>JIRA, ServiceNow, Freshdesk</li>
+      <li>Escalation Handling</li>
+    </ul>
+  </div>
 
-<section class="projects">
-  <h2>Projects & Contributions</h2>
-  <ul>
-    <li>Automated data pipeline monitoring with AWS CloudWatch for LMS platform.</li>
-    <li>Developed dashboards using Power BI for support ticket tracking.</li>
-    <li>Built an internal tool for process documentation and SOP management.</li>
-  </ul>
-</section>
+  <div class="box">
+    <h2>Key Achievements</h2>
+    <ul class="achievements-list">
+      <li>Delivered end-to-end support for iLearningEngines across onboarding and catalog operations.</li>
+      <li>Reduced manual reporting by 40% through Power BI & Jaspersoft automation.</li>
+      <li>Improved SQL query performance by 35% for backend diagnostics and analytics.</li>
+      <li>Reduced Tier-1 support response time by 30% using AI chatbot workflows.</li>
+      <li>Led a 5–10 member support team, maintaining SLA compliance.</li>
+      <li>Authored 40+ SOPs and KB articles, standardizing training and support.</li>
+      <li>Partnered with Product & Engineering to fix launch issues and catalog accuracy.</li>
+    </ul>
+  </div>
 
-<section class="contact">
-  <h2>Contact Me</h2>
-  <p>Email: <a href="mailto:revathygopals@gmail.com">revathygopals@gmail.com</a></p>
-  <p>Phone: +91-9400935635</p>
-  <p class="socials">
-    <a href="https://linkedin.com/in/revathy-gopal-s-216167219" target="_blank">LinkedIn</a> |
-    <a href="https://github.com/" target="_blank">GitHub</a>
-  </p>
+  <div class="box">
+    <h2>Projects</h2>
+
+    <h3>📊 Sales Performance Dashboard</h3>
+    <p><strong>Objective:</strong> Built a Power BI dashboard for analyzing revenue, customer behavior, and geography trends across sales channels.</p>
+    <ul>
+      <li>Revenue overview, customer insights, regional analysis, and YoY trends.</li>
+      <li>Used Power BI, DAX, and advanced filtering options.</li>
+      <li><strong>Impact:</strong> Enabled faster decision-making and regional strategy optimization.</li>
+    </ul>
+
+    <h3>📈 User Engagement & Analytics Dashboard</h3>
+    <p>Developed dashboards in Power BI & Jaspersoft to track user retention and operational KPIs.</p>
+    <ul>
+      <li>Reduced manual report time by 40% and increased retention by 15%.</li>
+      <li>Scalable templates built for cross-department usage.</li>
+    </ul>
+
+    <h3>🤖 AI-Driven LMS & Hyper-App Analysis</h3>
+    <p>Led requirement gathering and cross-functional collaboration for AI integrations in LMS and enterprise workflows.</p>
+    <ul>
+      <li>Features: AI chatbot, recommendation engine, intelligent scheduling.</li>
+      <li>Improved efficiency by 25% and reduced manual work by 30%.</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Professional Experience</h2>
+
+    <div class="exp-block">
+      <p class="role-title">Customer Support and Success Manager</p>
+      <p class="company">Emplay Analytics India Pvt Ltd | Mar 2025 – Jun 2025 | Remote</p>
+      <ul>
+        <li>Managed technical support, escalations, and reporting for enterprise clients.</li>
+        <li>Built lifecycle dashboards using SQL and Excel; collaborated with leadership and Product teams.</li>
+      </ul>
+    </div>
+
+    <div class="exp-block">
+      <p class="role-title">Senior Software Support Engineer</p>
+      <p class="company">iLearningEngines India Pvt Ltd | Jan 2024 – Feb 2025 | Remote</p>
+      <ul>
+        <li>Built Power BI dashboards and responded to complex LMS queries from global clients.</li>
+        <li>Led SOP creation, vendor documentation, and collaborated with Sales for renewals.</li>
+      </ul>
+    </div>
+
+    <div class="exp-block">
+      <p class="role-title">Software Support Engineer</p>
+      <p class="company">iLearningEngines India Pvt Ltd | Aug 2021 – Dec 2023</p>
+      <ul>
+        <li>Handled API and SQL-related issues; supported integrations, monitored AWS logs, and led catalog audits.</li>
+      </ul>
+    </div>
+
+    <div class="exp-block">
+      <p class="role-title">Application Engineer</p>
+      <p class="company">PE Instrumentation | Mar 2021 – Jul 2021</p>
+      <ul>
+        <li>Provided support for industrial control systems and drafted technical documentation.</li>
+      </ul>
+    </div>
+
+    <div class="exp-block">
+      <p class="role-title">Client Service Associate</p>
+      <p class="company">Wings Technologies | Jan 2020 – Jun 2020</p>
+      <ul>
+        <li>Supported US & Canadian clients; handled escalations and coordinated with technical teams.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box">
+    <h2>Education</h2>
+    <ul>
+      <li><strong>B.Tech in Electronics and Communication</strong> – Kerala University (2012–2016) – Grade: 7.8/10</li>
+    </ul>
+  </div>
+
+  <div class="box contact">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:revathygopals@gmail.com">revathygopals@gmail.com</a></p>
+    <p><strong>Phone:</strong> +91-9400935635</p>
+    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/revathy-gopal-s-216167219" target="_blank">Revathy Gopal S</a></p>
+  </div>
 </section>
 
 <footer>
-  <p>© 2025 Revathy Gopal S</p>
+  <p>© 2025 Revathy Gopal S | Chennai, Tamil Nadu, India</p>
 </footer>
 
 </body>
